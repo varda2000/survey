@@ -1,0 +1,15 @@
+<div>
+  <h2>עדכן סקר</h2>
+  <div>
+    <label>שם סקר:
+      <input [(ngModel)]="surveyData.survey_name" placeholder="שם סקר"/>
+    </label><br>
+    <label>תאור סקר:
+      <input [(ngModel)]="surveyData.survey_desc" placeholder="תאור הסקר"/>
+    </label><br>
+    <label>מחיר סקר:
+      <input [(ngModel)]="surveyData.survey_price" placeholder="מחיר הסקר"/>
+    </label><br>
+  </div>
+  <button (click)="updateSurvey()">עדכן</button>
+</div>

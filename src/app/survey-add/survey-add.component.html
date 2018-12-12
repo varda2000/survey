@@ -1,0 +1,15 @@
+<div>
+  <h2>הוסף סקר</h2>
+  <div>
+    <label>שם סקר:
+      <input [(ngModel)]="surveyData.survey_name" placeholder="שם סקר"/>
+    </label><br>
+    <label>תאור הסקר:
+      <input [(ngModel)]="surveyData.survey_desc" placeholder="תאור הסקר"/>
+    </label><br>
+    <label>מחיר הסקר:
+      <input [(ngModel)]="surveyData.survey_price" placeholder="מחיר"/>
+    </label><br>
+  </div>
+  <button (click)="addSurvey()">הוסף</button>
+</div>
