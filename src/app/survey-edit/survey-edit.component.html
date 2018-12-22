@@ -2,13 +2,13 @@
   <h2>עדכן סקר</h2>
   <div>
     <label>שם סקר:
-      <input [(ngModel)]="surveyData.survey_name" placeholder="שם סקר"/>
+      <input [(ngModel)]="surveyData.name" placeholder="שם סקר"/>
     </label><br>
     <label>תאור סקר:
-      <input [(ngModel)]="surveyData.survey_desc" placeholder="תאור הסקר"/>
+      <input [(ngModel)]="surveyData.userName" placeholder="שם משתמש"/>
     </label><br>
     <label>מחיר סקר:
-      <input [(ngModel)]="surveyData.survey_price" placeholder="מחיר הסקר"/>
+      <input [(ngModel)]="surveyData.dateUpdating" placeholder="תאריך עדכון"/>
     </label><br>
   </div>
   <button (click)="updateSurvey()">עדכן</button>

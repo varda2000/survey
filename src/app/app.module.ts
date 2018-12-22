@@ -7,35 +7,10 @@ import { SurveyComponent } from './survey/survey.component';
 import { SurveyAddComponent } from './survey-add/survey-add.component';
 import { SurveyDetailsComponent } from './survey-details/survey-details.component';
 import { SurveyEditComponent } from './survey-edit/survey-edit.component';
-import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import {AppRoutingModule} from './app-routing.module';
 
-const appRoutes: Routes = [
-  {
-    path: 'survey',
-    component: SurveyComponent,
-    data: { title: 'רשימת סקרים' }
-  },
-  {
-    path: 'survey-details/:id',
-    component: SurveyDetailsComponent,
-    data: { title: 'פרטי הסקר' }
-  },
-  {
-    path: 'survey-add',
-    component: SurveyAddComponent,
-    data: { title: 'הוספת סקר' }
-  },
-  {
-    path: 'survey-edit/:id',
-    component: SurveyEditComponent,
-    data: { title: 'עריכת סקר' }
-  },
-  { path: '',
-    redirectTo: '/survey',
-    pathMatch: 'full'
-  }
-];
+
 
 
 @NgModule({
@@ -47,11 +22,11 @@ const appRoutes: Routes = [
     SurveyEditComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
     FormsModule,
     BrowserModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

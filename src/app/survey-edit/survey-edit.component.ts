@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ApiService} from '../shared/services/api.service';
+import {Survey} from '../../interfaces/survey';
 
 @Component({
   selector: 'survey-edit',
@@ -9,7 +10,7 @@ import {ApiService} from '../shared/services/api.service';
 })
 export class SurveyEditComponent implements OnInit {
 
-  @Input() surveyData: any = { survey_name: '', survey_desc: '', survey_price: 0 };
+  @Input() surveyData = {} as Survey;
 
 
 

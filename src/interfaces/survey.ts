@@ -1,4 +1,5 @@
 export interface Survey {
-  name: string;
-  elements: Array<any>;
+  name?: string;
+  userName?: string;
+  dateUpdating?: string;
 }

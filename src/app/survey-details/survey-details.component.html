@@ -1,8 +1,8 @@
 <div *ngIf="survey" class="surveys">
   <h2>{{survey.survey_name | uppercase}} פרטים</h2>
-  <div><span>תאור: </span>{{survey.survey_desc}}</div>
-  <div><span>מחיר: </span>{{survey.survey_price}}</div>
-  <div><span>תאריך עדכון </span>{{today | date:'fullDate'}}</div>
+  <div><span>שם:</span>{{survey.name}}</div>
+  <div><span>שם משתמש: </span>{{survey.userName}}</div>
+  <div><span>תאריך עדכון </span>{{survey.dateUpdating }}</div>
   <div>
     <button routerLink="/survey-edit/{{survey.id}}">
       עריכה

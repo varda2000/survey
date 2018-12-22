@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import "styles/fonts";
+@import "styles/helpers";
+@import "styles/variables";
+
+body {
+  height: 100%;
+  direction: rtl;
+  padding: 10px;
+  font-family: AlmoniRegular, serif;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+html {
+  height: 100%;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+}
+

@@ -10,7 +10,7 @@ import {ApiService} from '../shared/services/api.service';
 export class SurveyDetailsComponent implements OnInit {
 
   survey: any;
-  today: number = Date.now();
+
 
   constructor(public rest: ApiService, private route: ActivatedRoute, private router: Router) { }
 

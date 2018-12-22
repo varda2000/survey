@@ -1,0 +1,306 @@
+$htmlDirection: ltr;
+// Base spacing
+$ui-space-prefix: unquote('.ui-space');
+
+$ui-spacing-tiny: 5px;
+$ui-spacing-small: 10px;
+$ui-spacing-regular: 15px;
+$ui-spacing-mid: 20px;
+$ui-spacing-medium: 25px;
+$ui-spacing-large: 30px;
+$ui-spacing-xlarge: 35px;
+$ui-spacing-xxlarge: 40px;
+$ui-spacing-xxxlarge: 45px;
+$ui-spacing-xxxxlarge: 50px;
+$ui-spacing-tiny-huge: 55px;
+$ui-spacing-small-huge: 60px;
+$ui-spacing-huge: 65px;
+$ui-spacing-xhuge: 70px;
+
+@function htmlDirection() {
+  @if ($htmlDirection == ltr) {
+    @return left;
+  } @else {
+    @return right;
+  }
+}
+
+@function htmlDirection-rev() {
+  @if ($htmlDirection == ltr) {
+    @return right;
+  } @else {
+    @return left;
+  }
+}
+
+@mixin ui-space($prefix, $suffix, $size) {
+
+  $suffix: unquote($suffix);
+
+  #{$prefix}-#{$suffix} {
+    padding: #{$size} !important;;
+  }
+
+  // top and bottom, left and right.
+  #{$prefix}-tb-#{$suffix} {
+    padding-top: #{$size} !important;
+    padding-bottom: #{$size} !important;;
+  }
+  #{$prefix}-lr-#{$suffix} {
+    padding-#{htmlDirection-rev()}: #{$size} !important;
+    padding-#{htmlDirection()}: #{$size} !important;;
+  }
+
+  // top, bottom, left, right
+  #{$prefix}-t-#{$suffix} {
+    padding-top: #{$size} !important;
+  }
+  #{$prefix}-b-#{$suffix} {
+    padding-bottom: #{$size} !important;
+  }
+  #{$prefix}-l-#{$suffix} {
+    padding-#{htmlDirection()}: #{$size} !important;
+  }
+  #{$prefix}-r-#{$suffix} {
+    padding-#{htmlDirection-rev()}: #{$size} !important;
+  }
+
+  #{$prefix}-verti-#{$suffix} {
+    @extend #{$prefix}-t-#{$suffix};
+  }
+
+  // inner box spacing. for performance sake we use limited selectors
+  #{$prefix}-inner-horiz-#{$suffix} {
+    margin-#{htmlDirection()}: -#{$size};
+    > * {
+      padding-#{htmlDirection()}: #{$size};;
+    }
+  }
+
+}
+
+@include ui-space($suffix: 'tiny', $prefix: $ui-space-prefix, $size: $ui-spacing-tiny);
+@include ui-space($suffix: 'small', $prefix: $ui-space-prefix, $size: $ui-spacing-small);
+@include ui-space($suffix: 'regular', $prefix: $ui-space-prefix, $size: $ui-spacing-regular);
+@include ui-space($suffix: 'mid', $prefix: $ui-space-prefix, $size: $ui-spacing-mid);
+@include ui-space($suffix: 'medium', $prefix: $ui-space-prefix, $size: $ui-spacing-medium);
+@include ui-space($suffix: 'large', $prefix: $ui-space-prefix, $size: $ui-spacing-large);
+@include ui-space($suffix: 'xlarge', $prefix: $ui-space-prefix, $size: $ui-spacing-xlarge);
+@include ui-space($suffix: 'xxlarge', $prefix: $ui-space-prefix, $size: $ui-spacing-xxlarge);
+@include ui-space($suffix: 'xxxlarge', $prefix: $ui-space-prefix, $size: $ui-spacing-xxxlarge);
+@include ui-space($suffix: 'xxxxlarge', $prefix: $ui-space-prefix, $size: $ui-spacing-xxxxlarge);
+@include ui-space($suffix: 'tiny-huge', $prefix: $ui-space-prefix, $size: $ui-spacing-tiny-huge);
+@include ui-space($suffix: 'small-huge', $prefix: $ui-space-prefix, $size: $ui-spacing-small-huge);
+@include ui-space($suffix: 'huge', $prefix: $ui-space-prefix, $size: $ui-spacing-huge);
+@include ui-space($suffix: 'xhuge', $prefix: $ui-space-prefix, $size: $ui-spacing-xhuge);
+
+.dir-rtl {
+  direction: rtl;
+}
+
+.scroll-y {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-x {
+  overflow-x: auto
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-border {
+  border: 0 !important;
+}
+
+.stretch-height {
+  height: 100% !important;
+  max-height: 100% !important;
+  min-height: 100% !important;
+}
+
+.stretch-width {
+  width: 100% !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.in-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-data {
+  color: black;
+  font-weight: bold;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+.no-wrap{
+  white-space: nowrap;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.text-bold {
+  font-weight: bold !important;
+}
+
+.text-light {
+  opacity: 0.6;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.push-right {
+  float: right;
+}
+
+.push-left {
+  float: left;
+}
+
+.pull-left{
+  left: 0;
+}
+
+.high-line {
+  line-height: 1.1em;
+}
+.push-bottom {
+  vertical-align: bottom !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.width-325 {
+  width: 325px
+}
+
+.width-250 {
+  width: 250px
+}
+
+.width-200 {
+  width: 200px
+}
+
+.width-150 {
+  width: 150px
+}
+
+.width-170 {
+  width: 170px !important;
+}
+
+
+.width-125 {
+  width: 125px
+}
+
+.width-100 {
+  width: 100px
+}
+
+.width-50 {
+  width: 50px !important
+}
+
+.height-50{
+  height:50px;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+.move {
+  cursor: move;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+pre {
+  margin: 10px 0;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+.center-element {
+  margin: 0 auto;
+}
+
+.red {
+  color: red;
+}
+
+@mixin gt-xs() {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}

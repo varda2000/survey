@@ -1,0 +1,20 @@
+:host {
+  width: 100%;
+  .app-layout-container {
+    &.set-scroll-helper {
+      margin-left: calc(100vw - 100%);
+    }
+    &.mobile {
+      height: 100%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    height: 100%;
+  }
+  .content {
+    height: calc(100% - 80px);
+    &.mobile {
+      height: calc(100% - 60px);
+    }
+  }
+}

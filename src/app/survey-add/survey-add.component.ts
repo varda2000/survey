@@ -1,7 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ApiService} from '../shared/services/api.service';
-import {isNullOrUndefined} from 'util';
+import {Survey} from '../../interfaces/survey';
+
 
 @Component({
   selector: 'survey-add',
@@ -10,18 +11,23 @@ import {isNullOrUndefined} from 'util';
 })
 export class SurveyAddComponent implements OnInit {
 
-  @Input() surveyData = {survey_name: '', survey_desc: '', survey_price: 0};
+  @Input() surveyData = {} as Survey;
 
 
   constructor(public rest: ApiService, private route: ActivatedRoute, private router: Router) {
+
+
+    console.log('this.surveyData', this.surveyData);
+
   }
 
   ngOnInit() {
+    this.surveyData.dateUpdating = new Date().toDateString();
   }
 
   addSurvey() {
     this.rest.addSurvey('survey', this.surveyData).subscribe((result) => {
-       this.router.navigate(['/survey-details/' + result.id]);
+      this.router.navigate(['/survey-details/' + result.id]);
     }, (err) => {
       console.log(err);
     });
