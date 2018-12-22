@@ -4,12 +4,15 @@
     <label>שם סקר:
       <input [(ngModel)]="surveyData.name" placeholder="שם סקר"/>
     </label><br>
-    <label>תאור סקר:
+    <label>שם משתמש:
       <input [(ngModel)]="surveyData.userName" placeholder="שם משתמש"/>
     </label><br>
-    <label>מחיר סקר:
+    <label>תאריך עדכון:
       <input [(ngModel)]="surveyData.dateUpdating" placeholder="תאריך עדכון"/>
     </label><br>
   </div>
+  <div>
   <button (click)="updateSurvey()">עדכן</button>
+  <button (click)="gotoNewSuveyPages()">צור סקר חדש</button>
+  </div>
 </div>

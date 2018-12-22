@@ -9,6 +9,7 @@ import { SurveyDetailsComponent } from './survey-details/survey-details.componen
 import { SurveyEditComponent } from './survey-edit/survey-edit.component';
 import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
+import { SurveyPagesComponent } from './survey/survey-pages/survey-pages.component';
 
 
 
@@ -19,7 +20,8 @@ import {AppRoutingModule} from './app-routing.module';
     SurveyComponent,
     SurveyAddComponent,
     SurveyDetailsComponent,
-    SurveyEditComponent
+    SurveyEditComponent,
+    SurveyPagesComponent
   ],
   imports: [
     FormsModule,
