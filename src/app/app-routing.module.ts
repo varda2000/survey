@@ -1,11 +1,12 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {SurveyDetailsComponent} from './survey-details/survey-details.component';
-import {SurveyEditComponent} from './survey-edit/survey-edit.component';
-import {SurveyComponent} from './survey/survey.component';
-import {SurveyAddComponent} from './survey-add/survey-add.component';
+import {SurveyDetailsComponent} from './core/survey-details/survey-details.component';
+import {SurveyEditComponent} from './core/survey-edit/survey-edit.component';
+import {SurveyComponent} from './core/survey/survey.component';
+import {SurveyAddComponent} from './core/survey-add/survey-add.component';
 import {RouterModule, Routes} from '@angular/router';
-import {SurveyPagesComponent} from './survey/survey-pages/survey-pages.component';
+import {SurveyPagesComponent} from './core/survey/survey-pages/survey-pages.component';
+import {PageComponent} from './core/survey/survey-pages/page/page.component';
 
 const appRoutes: Routes = [
   {
@@ -33,13 +34,20 @@ const appRoutes: Routes = [
   {
     path: 'survey-pages',
     component: SurveyPagesComponent,
-    data: {title: 'בנית הסקר'}
+    data: {title: 'בנית הסקר'},
+    children: [
+      {path: '', component: PageComponent},
+      {path: '1', component: PageComponent}
+
+    ]
   },
   {
     path: '',
     redirectTo: '/survey',
     pathMatch: 'full'
   }
+
+
 ];
 
 @NgModule({

@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {SharedModule} from './shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
-import { SurveyComponent } from './survey/survey.component';
-import { SurveyAddComponent } from './survey-add/survey-add.component';
-import { SurveyDetailsComponent } from './survey-details/survey-details.component';
-import { SurveyEditComponent } from './survey-edit/survey-edit.component';
+import { SurveyComponent } from './core/survey/survey.component';
+import { SurveyAddComponent } from './core/survey-add/survey-add.component';
+import { SurveyDetailsComponent } from './core/survey-details/survey-details.component';
+import { SurveyEditComponent } from './core/survey-edit/survey-edit.component';
 import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
-import { SurveyPagesComponent } from './survey/survey-pages/survey-pages.component';
+import { SurveyPagesComponent } from './core/survey/survey-pages/survey-pages.component';
+import { PageComponent } from './core/survey/survey-pages/page/page.component';
+import { QuestionComponent } from './core/survey/survey-pages/page/questions/question/question.component';
 
 
 
@@ -21,7 +23,9 @@ import { SurveyPagesComponent } from './survey/survey-pages/survey-pages.compone
     SurveyAddComponent,
     SurveyDetailsComponent,
     SurveyEditComponent,
-    SurveyPagesComponent
+    SurveyPagesComponent,
+    PageComponent,
+    QuestionComponent
   ],
   imports: [
     FormsModule,

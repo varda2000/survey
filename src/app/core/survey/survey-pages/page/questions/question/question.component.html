@@ -1,0 +1,14 @@
+<div>
+  שאלה מס {{ questionNumber}}
+ <div> בחר סוג שאלה</div>
+  <select id="mySelect">
+    <option>פתוחה</option>
+    <option>מדרג</option>
+    <option>רדיו</option>
+    <option>בחירה מרובה</option>
+  </select>
+
+  <div>מהי השאלה שרוצה לשאול?</div>
+  <input ([ngModel])="theQuestion"/>
+
+</div>

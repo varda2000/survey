@@ -3,9 +3,10 @@
   <div><span>שם:</span>{{survey.name}}</div>
   <div><span>שם משתמש: </span>{{survey.userName}}</div>
   <div><span>תאריך עדכון </span>{{survey.dateUpdating }}</div>
-  <div>
-    <button routerLink="/survey-edit/{{survey.id}}">
+  <div class="footer">
+    <button routerLink="/survey-edit/{{survey.id}}" class="text-right">
       עריכה
     </button>
+    <button (click)="gotoNewSuveyPages()" class="text-right">התחל בנית הסקר</button>
   </div>
 </div>

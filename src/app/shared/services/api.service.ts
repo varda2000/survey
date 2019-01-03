@@ -34,34 +34,34 @@ export class ApiService {
  constructor(private http: HttpClient) {
   }
 
-  getSurveys(method: string, params: any = {}): Observable<any> {
+  getAll(method: string, params: any = {}): Observable<any> {
     return this.http.get(`${this.baseUrl}/${method}`).pipe(
       map(this.extractData));
   }
 
-  getSurvey(method: string, params: any = {}): Observable<any> {
+  get(method: string, params: any = {}): Observable<any> {
     return this.http.get(`${this.baseUrl}/${method}/${params}`).pipe(
       map(this.extractData));
   }
 
-  addSurvey (method: string, payload: any = {}): Observable<any> {
+  add (method: string, payload: any = {}): Observable<any> {
       return this.http.post<any>(`${this.baseUrl}/${method}`, JSON.stringify(payload), httpOptions).pipe(
       tap((survey) => console.log(`added survey w/ id=${survey.id}`)),
-      catchError(this.handleError<any>('addSurvey'))
+      catchError(this.handleError<any>('add'))
     );
   }
 
-  updateSurvey (method: string, id: number, payload: any = {}): Observable<any> {
+  update (method: string, id: number, payload: any = {}): Observable<any> {
     return this.http.put(`${this.baseUrl}/${method}/${id}`, JSON.stringify(payload), httpOptions).pipe(
       tap(_ => console.log(`updated survey id=${id}`)),
-      catchError(this.handleError<any>('updateSurvey'))
+      catchError(this.handleError<any>('update'))
     );
   }
 
-  deleteSurvey (method: string, id: number , payload: any = {}): Observable<any> {
+  delete (method: string, id: number , payload: any = {}): Observable<any> {
     return this.http.delete<any>(`${this.baseUrl}/${method}/${id}`, httpOptions).pipe(
       tap(_ => console.log(`deleted survey id=${id}`)),
-      catchError(this.handleError<any>('deleteSurvey'))
+      catchError(this.handleError<any>('delete'))
     );
   }
 

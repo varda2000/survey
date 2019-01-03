@@ -1,8 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ApiService} from '../shared/services/api.service';
-import {Survey} from '../../interfaces/survey';
+
+
 import {isNullOrUndefined} from 'util';
+import {Survey} from '../../../interfaces/survey';
+import {ApiService} from '../../shared/services/api.service';
 
 @Component({
   selector: 'survey-edit',
@@ -21,15 +23,15 @@ export class SurveyEditComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.rest.getSurvey('survey', this.route.snapshot.params.id).subscribe((data: {}) => {
+    this.rest.get('survey', this.route.snapshot.params.id).subscribe((data: {}) => {
       console.log(data);
       this.surveyData = data;
     });
   }
 
-  updateSurvey() {
+  public updateSurvey() {
     const id = this.route.snapshot.params.id;
-    this.rest.updateSurvey('survey', id, this.surveyData).subscribe((result) => {
+    this.rest.update('survey', id, this.surveyData).subscribe((result) => {
       if (!isNullOrUndefined(result)) {
         this.surveyId = result.id;
         this.router.navigate(['/survey-details/' + result.id]);
@@ -40,7 +42,7 @@ export class SurveyEditComponent implements OnInit {
 
   }
 
-  gotoNewSuveyPages() {
+  public gotoNewSuveyPages() {
     this.router.navigate(['/survey-pages/']);
   }
 

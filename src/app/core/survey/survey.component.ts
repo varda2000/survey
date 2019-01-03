@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute, Router } from '@angular/router';
-import {ApiService} from '../shared/services/api.service';
+import {ApiService} from '../../shared/services/api.service';
 
 @Component({
   selector: 'survey',
@@ -21,7 +21,7 @@ export class SurveyComponent implements OnInit {
 
   getSurveys() {
     this.surveys = [];
-    this.rest.getSurveys('survey').subscribe((data: {}) => {
+    this.rest.getAll('survey').subscribe((data: {}) => {
       console.log(data);
       this.surveys = data;
     });
@@ -32,7 +32,7 @@ export class SurveyComponent implements OnInit {
   }
 
   delete(id) {
-    this.rest.deleteSurvey('survey', id)
+    this.rest.delete('survey', id)
       .subscribe(res => {
           this.getSurveys();
         }, (err) => {

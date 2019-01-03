@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ApiService} from '../shared/services/api.service';
+import {ApiService} from '../../shared/services/api.service';
 
 @Component({
   selector: 'survey-details',
@@ -15,10 +15,14 @@ export class SurveyDetailsComponent implements OnInit {
   constructor(public rest: ApiService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.rest.getSurvey('survey', this.route.snapshot.params.id).subscribe((data: {}) => {
+    this.rest.get('survey', this.route.snapshot.params.id).subscribe((data: {}) => {
       console.log(data);
       this.survey = data;
     });
+  }
+
+  public gotoNewSuveyPages() {
+    this.router.navigate(['/survey-pages/']);
   }
 
 }

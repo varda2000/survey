@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ApiService} from '../shared/services/api.service';
-import {Survey} from '../../interfaces/survey';
+import {ApiService} from '../../shared/services/api.service';
+import {Survey} from '../../../interfaces/survey';
 
 
 @Component({
@@ -23,12 +23,15 @@ export class SurveyAddComponent implements OnInit {
 
   ngOnInit() {
     this.surveyData.dateUpdating = new Date().toDateString();
+    this.surveyData.Pages = 0;
   }
 
   addSurvey() {
-    this.rest.addSurvey('survey', this.surveyData).subscribe((result) => {
+    this.rest.add('survey', this.surveyData).subscribe((result) => {
+
       this.router.navigate(['/survey-details/' + result.id]);
-    }, (err) => {
+    },
+      (err) => {
       console.log(err);
     });
   }
