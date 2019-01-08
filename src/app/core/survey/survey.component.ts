@@ -21,7 +21,7 @@ export class SurveyComponent implements OnInit {
 
   getSurveys() {
     this.surveys = [];
-    this.rest.getAll('survey').subscribe((data: {}) => {
+    this.rest.getAll('survey').subscribe( data => {
       console.log(data);
       this.surveys = data;
     });

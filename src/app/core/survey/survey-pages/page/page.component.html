@@ -1,8 +1,0 @@
-<div>
-  נושא הדף:
-  <input [(ngModel)]="page.pageTitle" />
-  תאור:
-  <input [(ngModel)]="page.pageDescription"/>
-  <button (click)="addQuestion()">הוסף שאלה</button>
-  <question [questionNumber]="qNumber" *ngIf="showquestion"></question>
-</div>

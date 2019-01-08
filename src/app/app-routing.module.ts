@@ -5,8 +5,6 @@ import {SurveyEditComponent} from './core/survey-edit/survey-edit.component';
 import {SurveyComponent} from './core/survey/survey.component';
 import {SurveyAddComponent} from './core/survey-add/survey-add.component';
 import {RouterModule, Routes} from '@angular/router';
-import {SurveyPagesComponent} from './core/survey/survey-pages/survey-pages.component';
-import {PageComponent} from './core/survey/survey-pages/page/page.component';
 
 const appRoutes: Routes = [
   {
@@ -31,16 +29,7 @@ const appRoutes: Routes = [
     data: {title: 'עריכת סקר'}
   }
   ,
-  {
-    path: 'survey-pages',
-    component: SurveyPagesComponent,
-    data: {title: 'בנית הסקר'},
-    children: [
-      {path: '', component: PageComponent},
-      {path: '1', component: PageComponent}
 
-    ]
-  },
   {
     path: '',
     redirectTo: '/survey',

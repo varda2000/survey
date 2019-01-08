@@ -7,6 +7,9 @@
     <button routerLink="/survey-edit/{{survey.id}}" class="text-right">
       עריכה
     </button>
-    <button (click)="gotoNewSuveyPages()" class="text-right">התחל בנית הסקר</button>
+    <button (click)="buildSurvey()" class="text-right">התחל בנית הסקר</button>
+    <div *ngIf="addQuestions">
+      <question ></question>
+    </div>
   </div>
 </div>

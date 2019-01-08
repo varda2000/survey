@@ -9,9 +9,8 @@ import { SurveyDetailsComponent } from './core/survey-details/survey-details.com
 import { SurveyEditComponent } from './core/survey-edit/survey-edit.component';
 import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
-import { SurveyPagesComponent } from './core/survey/survey-pages/survey-pages.component';
-import { PageComponent } from './core/survey/survey-pages/page/page.component';
-import { QuestionComponent } from './core/survey/survey-pages/page/questions/question/question.component';
+import { QuestionComponent } from './core/question/question.component';
+import {ApiService} from './shared/services/api.service';
 
 
 
@@ -23,8 +22,6 @@ import { QuestionComponent } from './core/survey/survey-pages/page/questions/que
     SurveyAddComponent,
     SurveyDetailsComponent,
     SurveyEditComponent,
-    SurveyPagesComponent,
-    PageComponent,
     QuestionComponent
   ],
   imports: [
@@ -34,7 +31,7 @@ import { QuestionComponent } from './core/survey/survey-pages/page/questions/que
     SharedModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

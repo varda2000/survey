@@ -13,7 +13,7 @@ import {ApiService} from '../../shared/services/api.service';
 })
 export class SurveyEditComponent implements OnInit {
 
-  @Input() surveyData = {} as Survey;
+  @Input() surveyData: Survey;
 
   public surveyId: any;
 
@@ -23,7 +23,7 @@ export class SurveyEditComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.rest.get('survey', this.route.snapshot.params.id).subscribe((data: {}) => {
+    this.rest.get('survey', this.route.snapshot.params.id).subscribe( data   => {
       console.log(data);
       this.surveyData = data;
     });
