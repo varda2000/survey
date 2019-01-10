@@ -1,0 +1,89 @@
+@import "../fonts";
+@import "../colors";
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 20px !important;
+  font-family: AlmoniLight;
+  color: $text-placeholder;
+  text-align: right;
+
+}
+
+input::-moz-placeholder { /* Firefox 19+ */
+  font-size: 20px !important;
+  font-family: AlmoniLight;
+  color: $text-placeholder;
+  text-align: right;
+
+}
+
+input:-ms-input-placeholder { /* IE 10+ */
+  font-size: 20px !important;
+  font-family: AlmoniLight;
+  color: $text-placeholder !important;
+  text-align: right;
+
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  font-size: 20px !important;
+  font-family: AlmoniLight;
+  color: $text-placeholder;
+  text-align: right;
+
+}
+
+
+.ui-inputtext{
+  font-size: 20px;
+  color: $font-input-header;
+  background: #fff;
+  padding: .429em;
+  height: 43px;
+  border-radius: 1px;
+  border: solid 2px $input-border-normal;
+  transition: border-color .3s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width:285px;
+  &:focus {
+    border: 2px solid $input-border-focus !important;
+    outline: 0 none;
+    box-shadow: none;
+  }
+
+}
+
+.input {
+  /* Overriding styles */
+  &-text {
+    font-family: AlmoniRegular;
+    width: 100%;
+    min-width: 50px;
+    line-height: 0.67;
+    height: 43px;
+    border-radius: 1px;
+    border: 2px solid $input-border-normal;
+    font-size: 20px;
+    color: $font-input-header;
+    padding: 0 20px;
+    &.error {
+      border-color: #df3508;
+    }
+    &.otp-input {
+      width: 285px;
+    }
+
+    &:focus {
+      border: 2px solid $input-border-focus !important;
+      outline: 0 none;
+      box-shadow: none;
+    }
+
+    &.ng-invalid.ng-dirty {
+      border-color: $text-input-error;
+    }
+  }
+
+
+}

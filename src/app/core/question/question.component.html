@@ -2,7 +2,12 @@
   שאלה מס {{ questionNumber}}
 <div>בחר שאלה</div>
  <p-dropdown [options]="questionType" [(ngModel)]="selectedQuestion"  optionLabel="qType" [showClear]="false"
-             (onChange)="onChooseQuestion(selectedQuestion)"></p-dropdown>
+             (onChange)="onChooseQuestion(selectedQuestion)">
+   <ng-template let-creditCard pTemplate="item">
+     <div>{{creditCard.label}}</div>
+     <div class="option-remark">{{creditCard.value.name}}</div>
+   </ng-template>
+ </p-dropdown>
   <div>מהי השאלה שרוצה לשאול?</div>
   <input type="text" pInputText [(ngModel)]="theQuestion" />
 

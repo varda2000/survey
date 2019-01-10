@@ -1,0 +1,85 @@
+@import "../colors";
+@import "../fonts";
+
+.ui-chkbox {
+  .ui-chkbox-box {
+    border-radius: 2px;
+    background-color: $check-background-unchecked;
+    border: solid 2px $check-Border-unchecked;
+    width: 34px;
+    height: 34px;
+    box-shadow: none;
+    .ui-chkbox-icon {
+      color: $check-glyph;
+      font-size: 24px;
+      line-height: 30px;
+      height: 100%;
+    }
+    &:not(.ui-state-disabled):not(.ui-state-active):hover {
+      border: solid 2px $check-Border-unchecked;
+      background: $check-background-unchecked !important;
+    }
+    &.ui-state-active, &:focus, &:hover {
+      background: $check-background-checked !important;
+      border: solid 2px $check-Border-checked;
+      color: $check-glyph;
+    }
+  }
+  &.loan-details{
+    & + .ui-chkbox-label{
+      width: 300px;
+    }
+  }
+  &.chk-time {
+    .ui-chkbox-box {
+      background-color: transparent;
+      border: none;
+      width: 24px;
+      height: 24px;
+
+      .ui-chkbox-icon {
+        color: $check-glyph-dark;
+        font-size: 20px;
+        line-height: 25px;
+        height: 100%;
+      }
+      &:not(.ui-state-disabled):not(.ui-state-active):hover {
+        border: none;
+        background: transparent !important;
+      }
+      &.ui-state-active, &:focus, &:hover {
+        background: transparent !important;
+        border: none;
+        color: $check-glyph-dark;
+      }
+    }
+  }
+}
+
+.ui-chkbox-label {
+
+  font-family: AlmoniRegular;
+  font-size: $fs18;
+  line-height: 1.22;
+  color: $font-input-header;
+  margin-right: 10px;
+  .long-text {
+    max-height: 50px;
+    min-width: 300px;
+  }
+
+}
+
+.chk-time-label {
+  color: $text-h-primary;
+}
+
+.chk-wizard-label {
+  font-size: 20px;
+  text-align: right;
+  color: $text-content-primary;
+  line-height: 1.1;
+  &-header {
+    font-family: AlmoniBold;
+  }
+}

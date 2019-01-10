@@ -1,0 +1,94 @@
+
+.ui-dropdown {
+  background: $dropdown-background;
+  border: 2px solid $input-border-normal;
+  border-radius: 1px;
+  width: 100% !important;
+  &:hover, &.ui-state-focus {
+    border: 2px solid $input-border-normal !important;
+    outline: 0 none;
+    box-shadow: none;
+  }
+
+  .ui-dropdown-label {
+    padding-right: 20px;
+    cursor: pointer;
+    height: 43px;
+    line-height: 43px;
+    display: block;
+    font-size: 20px;
+    color: $dropdown-text;
+    font-family: AlmoniRegular;
+    &.ui-inputtext {
+      padding: 0 20px 0 0;
+    }
+    &.ui-placeholder {
+      color: $text-placeholder !important;
+      font-size: $fs20 !important;
+      font-family: AlmoniLight;
+      text-align: right;
+      padding-right: 20px;
+    }
+  }
+
+  .ui-dropdown-trigger {
+    border-left: 0;
+    cursor: pointer;
+    width: 40px;
+    height: 100%;
+    left: 0 ;
+    right: initial;
+    right: auto;
+    .ui-dropdown-trigger-icon {
+      font-size: 7px;
+      color: $dropdown-icon-color;
+      font-family: ui-icons;
+      &.pi-caret-down {
+        @extend .ui-icons-dropdown;
+      }
+    }
+  }
+
+  &.ui-dropdown-open {
+    .ui-dropdown-trigger {
+      .pi-caret-down {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .ui-dropdown-panel {
+    box-shadow: 0px 5px 10px 0 rgba(0, 84, 159, 0.15);
+    padding: 0;
+    margin: -4px -2px 0 -2px;
+    border: 2px solid $input-border-normal;
+    background-color: $dropdown-background-panel;
+    border-radius: 1px;
+    box-sizing: initial;
+    .ui-dropdown-items-wrapper {
+      max-height: 275px !important;
+      .ui-dropdown-items {
+        padding: 0;
+        .ui-dropdown-item {
+          text-align: right;
+          color: $text-content-primary;
+          font-size: 20px;
+          padding: 10px 20px;
+          margin: 0;
+          font-family: AlmoniRegular;
+          &:hover, &:focus, &:active {
+            border: none !important;
+            background-color: $dropdown-background-item-hover !important;
+            color: $text-content-primary !important;
+          }
+          &.ui-state-highlight {
+            border: none !important;
+            background-color: $dropdown-item-background;
+            color: $text-content-primary !important;
+          }
+        }
+      }
+    }
+
+  }
+}
+

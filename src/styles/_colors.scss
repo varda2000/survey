@@ -1,0 +1,130 @@
+//buttons colors
+$button-primary-normal: #23d5a4;
+$button-primary-pressed: #1db78d;
+$button-primary-text: #ffffff;
+$button-secondary-normal: #dde8f5;
+$button-secondary-pressed: #adc3dd;
+$button-secondary-text:#2d4683;
+$button-operation-normal: #00549f;
+$button-operation-pressed: #00417b;
+$button-operation-text :#ffffff;
+$button-upload-background : #00549f;
+
+//link
+$link-pressed :#04194b;
+$link-hover :#094777;
+$link :#00549f;
+
+//text colors
+$text-error : #ff0000;
+$text-input-error : #df3508;
+$text-toggle-checked : #ffffff;
+$text-toggle-unchecked : #00549f;
+$text-placeholder :#bbc3d0;
+$text-h-primary : #2d4683;
+$text-h-secondary : #23d5a4;
+$text-content-primary: #272728;
+$text-content-secondary :#696969;
+
+//header
+$header-background : #f6f9fd;
+
+//input
+$font-input-header : #272728;
+$input-border-normal : #bbc3d0;
+$input-border-focus :#9da3ae;
+$input-border-confirm :#bbc3d0;
+$input-border-error: #df3508;
+$input-border-optional: #bbc3d0;
+$input-border-ellipse :#2d4683;
+
+//check-box
+$check-background-checked :#23d5a4;
+$check-background-unchecked :#ffffff;
+$check-Border-unchecked :#bbc3d0;
+$check-Border-checked :#23d5a4;
+$check-glyph : #ffffff;
+$check-glyph-dark :#2d4683;
+
+//switch
+$switch-background-on: #00549f;
+$switch-background-off: #f6f9fd;
+$switch-thumb :#f6f9fd;
+$switch-thumb-border : #d9d7d7;
+
+//input-switch
+$input-switch-background : red;
+
+//radio
+$radio-background-on: #00549f;
+$radio-border: #bbc3d0;
+
+//toggle
+$toggle-unchecked : #ffffff;
+$toggle-checked : #00549f;
+$toggle-text-unchecked : #00549f;
+$toggle-text-checked :#ffffff ;
+
+//dropdown
+$dropdown-background :#ffffff;
+$dropdown-background-panel :#ffffff;
+$dropdown-background-item-hover :#d9e6f2;
+$dropdown-text : #272728;
+$dropdown-icon-color:#717171;
+$dropdown-item-background: #dde8f5;
+$dropdown-remark-color:#6a6a6a;
+
+//tool-tip
+$tool-tip-background :#f6f6f6;
+$tool-tip-text : #6a6a6a;
+
+//wizard
+$icon-step-background: #ffffff;
+$icon-step-border: #2d4683;
+$icon-step-current-background: #a45ea2;
+$icon-step-current-border: #a45ea2;
+$icon-step-completed-background:  #2d4683;
+$icon-step-completed-border: #2d4683;
+$step-id: #ffffff;
+$line-step :#2d4683;
+
+//section
+$section-background-primary : #f6f6f6;
+$section-border-primary : #e1e1e1;
+$section-inner-title :#094777;
+$section-background :#fafafa;
+$section-background-regular :#ffffff;
+$section-border-regular: #f6f6f6;
+$section-footer-color : #094777;
+
+//list
+$list-primary-items-color : rgba(221, 232, 245,0.25);
+$list-secondary-items-color : rgba(0, 0, 0,0.5);
+
+//images
+$image-color :#2d4683;
+
+//slider
+$slider-background: #b9b9b9;
+$slider-range-background :#a45ea2;
+$slider-thumb-background: #ffffff;
+$slider-limits: #696969;
+
+//icon
+$icon-secondary : #a45ea2;
+$icon-background : #ffffff;
+
+//divider
+$divider-color :#c7c5cd;
+$divider-secondary-color :#dddddd;
+
+//dialog
+$dialog-background-color : #ffffff;
+$dialog-header-background: #f6f9fd;
+$dialog-close-icon-color :#272728;
+
+//tool-tip
+$tool-tip-color :#6a6a6a;
+$tool-tip-background : #f6f6f6;
+$tool-tip-border: #e1e1e1;
+$tool-tip-close :#8a8a8a;

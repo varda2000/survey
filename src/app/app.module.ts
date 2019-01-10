@@ -11,7 +11,7 @@ import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import { QuestionComponent } from './core/question/question.component';
 import {ApiService} from './shared/services/api.service';
-import {DropdownModule, InputTextModule} from 'primeng/primeng';
+import {CheckboxModule, DropdownModule, InputTextModule, RadioButtonModule, SliderModule} from 'primeng/primeng';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
@@ -34,7 +34,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppRoutingModule,
     DropdownModule,
     BrowserAnimationsModule,
-    InputTextModule
+    InputTextModule,
+    RadioButtonModule,
+    CheckboxModule,
+    SliderModule,
+    InputTextModule,
+    DropdownModule,
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

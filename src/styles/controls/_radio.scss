@@ -1,0 +1,52 @@
+@import "../colors";
+.ui-radiobutton {
+  background: #ffffff;
+  .ui-radiobutton-box {
+    background: #ffffff;
+    border: solid 2px #bbc3d0;
+    width: 26px;
+    height: 26px;
+    position: relative;
+    &.ui-state-focus {
+      box-shadow: none;
+    }
+    &:not(.ui-state-disabled):not(.ui-state-active):hover{
+      background: #FFF;
+    }
+    .ui-radiobutton-icon {
+      color: $radio-background-on;
+      font-size: 20px;
+      position: initial;
+      left: 50%;
+      top: 50%;
+      height: initial;
+      width: initial;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      margin-top:0;
+      margin-left:0;
+
+    }
+  }
+
+}
+
+.ui-radiobutton-label {
+  font-family: AlmoniBold;
+  font-size: 25px;
+  line-height: 1.12;
+  color: $button-secondary-text;
+  margin-right: 22px;
+}
+
+.radio-wizard-label{
+  font-family: AlmoniRegular;
+  font-size: 20px;
+  text-align: right;
+  color: $text-content-primary;
+  line-height: 0.67;
+  margin-right: 10px;
+  &-header{
+    font-family: AlmoniBold;
+  }
+}
