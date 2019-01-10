@@ -1,14 +1,9 @@
 <div>
   שאלה מס {{ questionNumber}}
- <div> בחר סוג שאלה</div>
-  <select id="mySelect">
-    <option>פתוחה</option>
-    <option>מדרג</option>
-    <option>רדיו</option>
-    <option>בחירה מרובה</option>
-  </select>
-
+<div>בחר שאלה</div>
+ <p-dropdown [options]="questionType" [(ngModel)]="selectedQuestion"  optionLabel="qType" [showClear]="false"
+             (onChange)="onChooseQuestion(selectedQuestion)"></p-dropdown>
   <div>מהי השאלה שרוצה לשאול?</div>
-  <input ([ngModel])="theQuestion"/>
+  <input type="text" pInputText [(ngModel)]="theQuestion" />
 
 </div>

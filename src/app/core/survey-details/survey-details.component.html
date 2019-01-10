@@ -9,7 +9,7 @@
     </button>
     <button (click)="buildSurvey()" class="text-right">התחל בנית הסקר</button>
     <div *ngIf="addQuestions">
-      <question ></question>
+      <question [questionNumber]="questionNumber"></question>
     </div>
   </div>
 </div>

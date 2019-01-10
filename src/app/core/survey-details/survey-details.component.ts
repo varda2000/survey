@@ -11,8 +11,9 @@ import {SurveyQuestion} from '../../../interfaces/survey-question';
 export class SurveyDetailsComponent implements OnInit {
 
   survey: any;
-  public addQuestions: boolean ;
+  public addQuestions: boolean;
   public questions: SurveyQuestion[];
+  public questionNumber: number;
 
 
   constructor(public rest: ApiService, private route: ActivatedRoute, private router: Router) {
@@ -29,6 +30,8 @@ export class SurveyDetailsComponent implements OnInit {
 
   public buildSurvey() {
     this.addQuestions = true;
+    this.questionNumber = 1;
+
   }
 
 }
