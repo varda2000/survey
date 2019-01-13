@@ -24,16 +24,17 @@ export class SurveyAddComponent implements OnInit {
   ngOnInit() {
     this.surveyData.dateUpdating = new Date().toDateString();
     this.surveyData.Pages = 0;
+    this.surveyData.surveyQuestions = [];
   }
 
   addSurvey() {
     this.rest.add('survey', this.surveyData).subscribe((result) => {
 
-      this.router.navigate(['/survey-details/' + result.id]);
-    },
+        this.router.navigate(['/survey-details/' + result.id]);
+      },
       (err) => {
-      console.log(err);
-    });
+        console.log(err);
+      });
   }
 
 

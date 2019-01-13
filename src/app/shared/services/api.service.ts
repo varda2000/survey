@@ -39,6 +39,11 @@ export class ApiService {
       map(this.extractData));
   }
 
+  getAllQuestions(method: string, surveyId: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${method}/${surveyId}`).pipe(
+      map(this.extractData));
+  }
+
   get(method: string, params: any = {}): Observable<any> {
     return this.http.get(`${this.baseUrl}/${method}/${params}`).pipe(
       map(this.extractData));

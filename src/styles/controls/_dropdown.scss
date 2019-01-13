@@ -42,10 +42,10 @@
     .ui-dropdown-trigger-icon {
       font-size: 7px;
       color: $dropdown-icon-color;
-      font-family: ui-icons;
-      &.pi-caret-down {
-        @extend .ui-icons-dropdown;
-      }
+      //font-family: ui-icons;
+      //&.pi-caret-down {
+      //  @extend .ui-icons-dropdown;
+      //}
     }
   }
 

@@ -1,14 +1,27 @@
 <div>
   שאלה מס {{ questionNumber}}
-<div>בחר שאלה</div>
- <p-dropdown [options]="questionType" [(ngModel)]="selectedQuestion"  optionLabel="qType" [showClear]="false"
-             (onChange)="onChooseQuestion(selectedQuestion)">
-   <ng-template let-creditCard pTemplate="item">
-     <div>{{creditCard.label}}</div>
-     <div class="option-remark">{{creditCard.value.name}}</div>
-   </ng-template>
- </p-dropdown>
-  <div>מהי השאלה שרוצה לשאול?</div>
-  <input type="text" pInputText [(ngModel)]="theQuestion" />
 
+  <input type="text" pInputText [(ngModel)]="theQuestion" placeholder="מהי השאלה שהינך רוצה לשאול?"/>
+
+  <div *ngIf="theQuestion!==''">
+    <p-dropdown [options]="questionType" [(ngModel)]="selectedQuestionType" placeholder="בחר סוג שאלה"
+                optionLabel="qType"
+                (onChange)="onChooseQuestionType(selectedQuestionType)">
+    </p-dropdown>
+
+
+  <div
+    [ngSwitch]="question.questionType">
+    <question-row *ngSwitchCase=1></question-row>
+    <question-area *ngSwitchCase=2></question-area>
+    <question-radio *ngSwitchCase=3></question-radio>
+    <question-check *ngSwitchCase=4></question-check>
+    <question-range *ngSwitchCase=5></question-range>
+
+     <div>
+      <button pButton (click)="goOn()">שמירה</button>
+      <button pButton (click)="finish()">סיום</button>
+    </div>
+  </div>
+  </div>
 </div>

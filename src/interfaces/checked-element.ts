@@ -1,4 +1,4 @@
-export interface RadioElement {
+export interface CheckedElement {
   questionNumber: number;
   surveyNumber: number;
   options: string[];

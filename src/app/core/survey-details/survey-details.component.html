@@ -4,12 +4,26 @@
   <div><span>שם משתמש: </span>{{survey.userName}}</div>
   <div><span>תאריך עדכון </span>{{survey.dateUpdating }}</div>
   <div class="footer">
-    <button routerLink="/survey-edit/{{survey.id}}" class="text-right">
+    <button pButton routerLink="/survey-edit/{{survey.id}}" class="text-right">
       עריכה
     </button>
-    <button (click)="buildSurvey()" class="text-right">התחל בנית הסקר</button>
-    <div *ngIf="addQuestions">
-      <question [questionNumber]="questionNumber"></question>
-    </div>
+    <button *ngIf="questions.length <= 0"  pButton (click)="buildSurvey()" class="text-right">התחל בנית הסקר</button>
+    <button *ngIf="questions.length>0" pButton (click)="continueSurvey()" class="text-right">המשך בנית הסקר</button>
+
+    <ul *ngIf="showList" class="questions">
+      <li *ngFor="let q of questions; let i=index;">
+        <div><span>שאלה</span> {{i+1}}  </div>
+        <div>{{q[i].theQuestion}}</div>
+      </li>
+    </ul>
+<ul *ngIf="addQuestions">
+    <li  *ngFor="let q of questions">
+
+      <question [questionNumber]="questionNumber"
+                [survey]="survey"></question>
+      <button *ngIf="questions.length>0" pButton (click)="continueSurvey()" class="text-right">הוסף שאלה</button>
+
+    </li>
+</ul>
   </div>
 </div>

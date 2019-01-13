@@ -1,5 +1,6 @@
 export interface RateElements {
-  questionNumber: string;
+  questionNumber?: number;
+  surveyNumber?: number;
   minRateDesc?: string;
   maxRateDesc?: string;
   maxRange?: number;

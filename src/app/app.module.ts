@@ -13,6 +13,11 @@ import { QuestionComponent } from './core/question/question.component';
 import {ApiService} from './shared/services/api.service';
 import {CheckboxModule, DropdownModule, InputTextModule, RadioButtonModule, SliderModule} from 'primeng/primeng';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { QuestionRowComponent } from './core/question-row/question-row.component';
+import { QuestionAreaComponent } from './core/question-area/question-area.component';
+import { QuestionRadioComponent } from './core/question-radio/question-radio.component';
+import { QuestionCheckComponent } from './core/question-check/question-check.component';
+import { QuestionRangeComponent } from './core/question-range/question-range.component';
 
 
 
@@ -24,7 +29,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     SurveyAddComponent,
     SurveyDetailsComponent,
     SurveyEditComponent,
-    QuestionComponent
+    QuestionComponent,
+    QuestionRowComponent,
+    QuestionAreaComponent,
+    QuestionRadioComponent,
+    QuestionCheckComponent,
+    QuestionRangeComponent
   ],
   imports: [
     FormsModule,

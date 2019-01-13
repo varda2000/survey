@@ -1,4 +1,3 @@
-
 import {SurveyQuestion} from './survey-question';
 
 
@@ -8,4 +7,5 @@ export interface Survey {
   dateUpdating?: string;
   Pages?: number;
   surveyQuestions: SurveyQuestion[];
+  id: number;
 }
